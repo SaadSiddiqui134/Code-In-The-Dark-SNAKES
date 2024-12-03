@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Steps to Follow</title>
+  <script src="https://cdn.tailwindcss.com"></script> <!-- Tailwind CDN -->
+</head>
+<body class="bg-gray-100">
+
+  <!-- Main Section -->
+  <div class="steps-section flex flex-col items-center justify-start min-h-screen py-10">
+    <!-- Heading -->
+    <div class="heading text-center mb-12">
+      <span class="steps text-white text-4xl">Steps</span>
+      <span class="to text-white text-4xl">to</span>
+      <span class="follow text-transparent text-4xl bg-clip-text bg-gradient-to-r from-white to-[#7038FA]">Follow</span>
+    </div>
+
+    <!-- Card View Section -->
+    <div class="card-container flex justify-center space-x-6 mt-10">
+      <!-- Card 1 -->
+      <div class="card bg-white p-6 rounded-lg shadow-lg w-60 hover:cursor-pointer hover:scale-105 transition-transform">
+        <img src="assets/img/brainstorm.gif" alt="Image 1" class="w-full h-40 object-cover rounded-lg gif-img">
+        <p class="mt-4 text-center text-gray-700">Brainstorm</p>
+        <p class="mt-2 text-sm text-center text-gray-700">
+          <span class="text-[#7038FA] text-4xl">“</span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, provident sed accusantium aliquam debitis fugit cupiditate corrupti. Deleniti, ad necessitatibus. <span class="text-[#7038FA] text-4xl"></span>
+        </p>
+      </div>
+    
+      <!-- Card 2 -->
+      <div class="card bg-white p-6 rounded-lg shadow-lg w-60 hover:cursor-pointer hover:scale-105 transition-transform">
+        <img src="assets/img/analyze.gif" alt="Image 2" class="w-full h-40 object-cover rounded-lg gif-img">
+        <p class="mt-4 text-center text-gray-700">Analyze</p>
+        <p class="mt-2 text-sm text-center text-gray-700">
+          <span class="text-[#7038FA] text-4xl">“</span> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error odit ea similique culpa distinctio ipsa vitae nobis eveniet dolorum ad! <span class="text-[#7038FA] text-4xl"></span>
+        </p>
+      </div>
+    
+      <!-- Card 3 -->
+      <div class="card bg-white p-6 rounded-lg shadow-lg w-60 hover:cursor-pointer hover:scale-105 transition-transform">
+        <img src="assets/img/evaluation.gif" alt="Image 3" class="w-full h-40 object-cover rounded-lg gif-img">
+        <p class="mt-4 text-center text-gray-700">Evaluate</p>
+        <p class="mt-2 text-sm text-center text-gray-700">
+          <span class="text-[#7038FA] text-4xl">“</span> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis, praesentium cum. Impedit minima autem sed, enim soluta perferendis quo. Ut. <span class="text-[#7038FA] text-4xl"></span>
+        </p>
+      </div>
+    
+      <!-- Card 4 -->
+      <div class="card bg-white p-6 rounded-lg shadow-lg w-60 hover:cursor-pointer hover:scale-105 transition-transform">
+        <img src="assets/img/cat-computer.gif" alt="Image 4" class="w-full h-40 object-cover rounded-lg gif-img">
+        <p class="mt-4 text-center text-gray-700">Code</p>
+        <p class="mt-2 text-sm text-center text-gray-700">
+          <span class="text-[#7038FA] text-4xl">“</span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor cupiditate omnis laborum est placeat asperiores animi sit quos deserunt corporis?<span class="text-[#7038FA] text-4xl"></span>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Loop through each card
+    document.querySelectorAll('.card').forEach(card => {
+      const gifImg = card.querySelector('.gif-img');
+      const gifSrc = gifImg.src;  // Store the original gif source
+
+      // Pause the GIF when the page loads (we do this by clearing the src initially)
+      gifImg.src = ''; 
+
+      // On hover, play the GIF
+      card.addEventListener('mouseenter', () => {
+        gifImg.src = gifSrc;  // Set the src again to start the animation
+      });
+
+      // Optionally, pause the GIF when mouse leaves
+      card.addEventListener('mouseleave', () => {
+        gifImg.src = '';  // Pause GIF when mouse leaves
+      });
+    });
+  </script>
+
+<!-- OUR PARTNERS SECTION -->
+<div class="our-partners-section flex flex-col items-center justify-start min-h-screen py-10">
+    <!-- Heading -->
+    <div class="heading text-center mb-6">
+      <span class="our text-white text-4xl">Our</span>
+      <span class="partners text-[#7038FA] text-4xl">Partners</span>
+    </div>
+  
+    <!-- Underline with Gradient -->
+    <div class="underline w-32 h-1 bg-gradient-to-r from-white to-[#7038FA] mx-auto"></div>
+  
+    <!-- Partners Section Content (Straight line with more space) -->
+    <div class="partners-content mt-10 flex justify-center space-x-28">
+      <!-- Partner 1 -->
+      <div class="partner-card">
+        <img src="assets/img/our partners/BUDS LOGO (No bg and No text) 1.png" alt="Partner 1" class="w-20 h-20 object-contain">
+      </div>
+      
+      <!-- Partner 2 -->
+      <div class="partner-card">
+        <img src="assets/img/our partners/SuperComp logo.svg" alt="Partner 2" class="w-20 h-20 object-contain">
+      </div>
+      
+      <!-- Partner 3 -->
+      <div class="partner-card">
+        <img src="assets/img/our partners/image 5.png" alt="Partner 3" class="w-20 h-20 object-contain">
+      </div>
+      
+      <!-- Partner 4 -->
+      <div class="partner-card">
+        <img src="assets/img/our partners/image 6.png" alt="Partner 4" class="w-20 h-20 object-contain">
+      </div>
+      
+      <!-- Partner 5 -->
+      <div class="partner-card">
+        <img src="assets/img/our partners/image 7.png" alt="Partner 5" class="w-20 h-20 object-contain">
+      </div>
+      
+      <!-- Partner 6 -->
+      <div class="partner-card">
+        <img src="assets/img/our partners/image 8.png" alt="Partner 6" class="w-20 h-20 object-contain">
+      </div>
+      
+      <!-- Partner 7 -->
+      <div class="partner-card">
+        <img src="assets/img/our partners/image 9.png" alt="Partner 7" class="w-20 h-20 object-contain">
+      </div>
+    </div>
+  </div>
+  
+  
+
+</body>
+</html>

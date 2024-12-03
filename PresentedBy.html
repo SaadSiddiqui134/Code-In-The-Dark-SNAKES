@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code in the Dark - Design Replication</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom Margin for Finger Size */
+        .header-margin {
+            margin-top: 6vh; /* Adjust this for the one-finger-size margin */
+        }
+
+        /* Text Styling for typewriter */
+        .typewriter {
+            font-size: 2.5rem; /* Increased font size for typewriter */
+            font-family: monospace;
+            white-space: nowrap;
+        }
+
+        /* Section Background with Image for Typewriter */
+        .typewriter-section {
+            background-image: url('assets/img/backgrounds/1st\ bg.svg');
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            padding: 20px;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh; /* Ensures it takes at least the full screen height */
+            text-align: center;
+            overflow: hidden;
+        }
+
+        /* Styling for the new Parallax Section */
+        .parallax-section {
+            position: relative;
+            width: 100%; /* Ensure it takes up the full width */
+            min-height: 100vh; /* Full height */
+            background-image: url('assets/img/backgrounds/2nd\ bg.png');
+            background-size: cover;
+            background-attachment: fixed; /* Parallax effect */
+            background-position: center;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        /* Optional: Text Styling inside Parallax */
+        .parallax-content {
+            z-index: 1;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        /* Styling for the span below the typewriter */
+        .bud-text {
+            font-size: 1rem; /* Smaller text size */
+            color: rgba(172, 162, 162, 0.74); /* White text color */
+            background-color: #4409358f; /* Background color for the span */
+            padding: 8px 16px; /* Padding inside the span for spacing */
+            border-radius: 8px; /* Optional: rounded corners for the span */
+            margin-top: 10px; /* Space between the typewriter and the span */
+        }
+
+        /* Styling for the new random text line */
+        .random-text {
+            font-size: 0.875rem; /* Smaller font size */
+            color: white; /* White text color */
+            margin-top: 10px; /* Space between Buds X Supercomp and the new text line */
+        }
+
+        /* Styling for the purple animated text */
+        .purple-text {
+            color: purple; /* Set the color to purple */
+        }
+
+        /* Styling for the white "By" text */
+        .white-text {
+            color: white;
+        }
+
+        /* Styling for the Card Slider Section */
+        .card-slider {
+            display: flex;
+            overflow-x: hidden;
+            gap: 1rem; /* Space between cards */
+            margin-top: 20px; /* Space between the other elements */
+            padding: 20px 0;
+            scroll-snap-type: x mandatory;
+            width: 100%; /* Ensure full width for carousel */
+        }
+
+        /* Card Styles */
+        .card {
+            min-width: 250px;
+            background-color: rgba(68, 9, 53, 0.85); /* Applied the background color like shared */
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            scroll-snap-align: start;
+        }
+
+        .card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .card-text {
+            padding: 10px;
+            font-size: 0.875rem;
+            color: #fff; /* Ensure the text is visible */
+        }
+
+        /* Hover Effect */
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        body {
+            min-height: 100%; /* Ensures the body takes up full height */
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body class="bg-cover bg-center bg-no-repeat h-screen text-white flex flex-col items-center">
+    <!-- Leave space for the header -->
+    <div class="header-margin"></div>
+
+    <!-- Typewriter Section with Background Image -->
+    <div class="typewriter-section">
+        <!-- Typewriter Animation -->
+        <p id="typewriter" class="typewriter"><span id="word" class="purple-text">Produced</span> <span class="white-text">By</span></p>
+
+        <!-- Small span text below the animation -->
+        <span class="bud-text rounded-4 font-semibold">Buds x Supercomp</span>
+
+        <!-- New random text line below -->
+        <p class="random-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, laborum?</p>
+
+        <!-- Card Slider Section -->
+        <div class="card-slider" id="cardSlider">
+            <!-- Card 1 -->
+            <div class="card">
+                <img src="assets/img/cid4.jpg" alt="Card Image 1">
+                <div class="card-text">
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                    <p>Lorem ipsum dolor sit.</p>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card">
+                <img src="assets/img/cid3.jpeg" alt="Card Image 2">
+                <div class="card-text">
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                    <p>Lorem ipsum dolor sit.</p>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card">
+                <img src="assets/img/cid2.jpg" alt="Card Image 3">
+                <div class="card-text">
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                    <p>Lorem ipsum dolor sit.</p>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="card">
+                <img src="assets/img/cid1.jpg" alt="Card Image 4">
+                <div class="card-text">
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                    <p>Lorem ipsum dolor sit.</p>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="card">
+                <img src="assets/img/cid6.jpeg" alt="Card Image 5">
+                <div class="card-text">
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                    <p>Lorem ipsum dolor sit.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Parallax Section with Different Background Image -->
+    <div class="parallax-section">
+        <div class="parallax-content">
+            <h2>Welcome to the Parallax Effect</h2>
+            <p>Scroll to see the background move at a different speed.</p>
+        </div>
+    </div>
+
+    <script>
+        const wordElement = document.getElementById('word');  // Word being animated
+        const words = ['Produced', 'Organized', 'Presented']; // Words to animate
+        const byElement = document.querySelector('.white-text'); // 'By' element
+        let wordIndex = 0;
+        let letterIndex = 0;
+        let isDeleting = false;
+        let text = '';
+
+        function typeWriter() {
+            if (isDeleting) {
+                // Delete the word
+                text = words[wordIndex].substring(0, letterIndex - 1);
+                letterIndex--;
+            } else {
+                // Type the next letter
+                text = words[wordIndex].substring(0, letterIndex + 1);
+                letterIndex++;
+            }
+
+            // Update the animated word (purple) and "By" (white)
+            wordElement.textContent = text;
+            // Keep the "By" part white
+            byElement.textContent = "By";
+
+            // Control the typing/deleting speed and transition to the next word
+            if (!isDeleting && letterIndex === words[wordIndex].length) {
+                setTimeout(() => {
+                    isDeleting = true;
+                }, 1000); // Delay before starting to delete the word
+            } else if (isDeleting && letterIndex === 0) {
+                wordIndex++;
+                if (wordIndex === words.length) {
+                    wordElement.textContent = 'Presented'; // Keep "Presented" when done
+                    byElement.textContent = "By"; // Keep "By" when done
+                    return; // Stop the animation once "Presented" is displayed
+                }
+                isDeleting = false;
+            }
+
+            setTimeout(typeWriter, isDeleting ? 100 : 200); // Typing speed (200ms), Deleting speed (100ms)
+        }
+
+        // Start the typing animation
+        window.onload = typeWriter;
+    </script>
+</body>
+</html>

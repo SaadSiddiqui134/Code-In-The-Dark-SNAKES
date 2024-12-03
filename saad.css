@@ -1,0 +1,12 @@
+.steps-section {
+    background-image: url('assets/img/backgroundcolorpallete/1st\ bg.svg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* No additional animation required, the GIFs are controlled via JavaScript */
+.gif-img {
+    pointer-events: none; /* Prevents mouse interactions with the GIF while paused */
+    transition: 0.3s ease-in-out; /* Smooth transition when hovering */
+}
